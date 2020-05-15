@@ -146,7 +146,7 @@ def BlackJack():
                 flag=True
                 while x==1:
                     cardi=newDeck.Draw()
-                    print(cardi.getSuit(),cardi.getFaceValue())
+                    print(cardi.getFaceValue(),cardi.getSuit())
                     PlayerVal+=BlackJackValues[cardi.getFaceValue()]
                     if cardi.getFaceValue()=="A":
                         PlayerVal-=10
@@ -185,6 +185,7 @@ def BlackJack():
                     flag1=True
                     while DealerVal<17:
                         cardi=newDeck.Draw()
+                        print(cardi.getFaceValue(),cardi.getSuit())
                         DealerVal+=BlackJackValues[cardi.getFaceValue()]
                         if cardi.getFaceValue()=="A":
                             DealerVal-=10
@@ -218,17 +219,20 @@ def BlackJack():
                         else:
                             print("Dealer Wins!\nBetter Luck Next Time!")
 
-        print("\nYour Stats\n")
-        PlayerList[0].PrintPlayerInfo()
+
 
         if PlayerList[0].cash <50:
             print("Insufficient Funds to play another round!\nHope to see you again")
+            print("\nYour Stats\n")
+            PlayerList[0].PrintPlayerInfo()
             break
         else:
             y=int(input("Do you want to play more!   \n1:YES  0:NO\n"))
             if y!=1:
+                print("\nYour Stats\n")
+                PlayerList[0].PrintPlayerInfo()
                 break
-            print("###############################################################################")
+
 
 
 
