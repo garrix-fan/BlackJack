@@ -1,4 +1,4 @@
-import random
+from random import shuffle
 class cards:
     def __init__(self):
         pass
@@ -19,7 +19,7 @@ class Deck:
         self.cursz=cursz
         self.deck=deck
     def shuffle(self):
-        random.shuffle(self.deck)
+        shuffle(self.deck)
     def Draw(self):
         if self.cursz==0:
             print("Error Deck Empty")
