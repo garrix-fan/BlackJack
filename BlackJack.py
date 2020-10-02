@@ -71,8 +71,8 @@ class BlackJackPlayer(Player):
         print("Name:",self.getUserName())
         print("Cash:",self.cash)
 
-UserSet={}
-PlayerList=[]
+UserSet=dict()
+PlayerList=list()
 def AddNewBlackJackPlayer():
     name=input("Enter your Name:")
     user=input("Enter your Username:")
