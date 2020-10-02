@@ -238,10 +238,11 @@ def BlackJack():
 
 
 
+def main():
+    BlackJack()
 
-
-BlackJack()
-
+if __name__ == '__main__':
+    main()
 
 
 
